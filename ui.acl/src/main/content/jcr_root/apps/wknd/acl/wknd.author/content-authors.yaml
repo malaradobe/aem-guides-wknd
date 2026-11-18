@@ -1,0 +1,20 @@
+# Netcentric AC Tool configuration (https://github.com/Netcentric/accesscontroltool)
+# Folder suffix ".author" limits this file to the author run mode.
+#
+- group_config:
+    - content-authors:
+        - unmanagedAcePathsRegex: "^(?!/content/(?:wknd|dam/wknd|experience-fragments/wknd)$).*"
+
+- ace_config:
+    - content-authors:
+        - path: /content/wknd
+          permission: allow
+          privileges: jcr:read,rep:write,jcr:versionManagement,jcr:lockManagement,crx:replicate
+
+        - path: /content/dam/wknd
+          permission: allow
+          privileges: jcr:read,rep:write,jcr:versionManagement,jcr:lockManagement,crx:replicate
+
+        - path: /content/experience-fragments/wknd
+          permission: allow
+          privileges: jcr:read,rep:write,jcr:versionManagement,jcr:lockManagement,crx:replicate
